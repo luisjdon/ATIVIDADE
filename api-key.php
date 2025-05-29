@@ -4,7 +4,7 @@
 // or use environment variables instead
 
 // Gemini API key
-$api_key = "AIzaSyAhtSTUL7Rz5ex1D_fEA6Gg77FiiBOdQDw";
+$api_key = "API";
 
 // Function to get the API key
 function getGeminiApiKey() {
