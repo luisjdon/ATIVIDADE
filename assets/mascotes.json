@@ -1,0 +1,107 @@
+{
+  "panda": {
+    "nome": "Pandi",
+    "imagens": {
+      "normal": "https://cdn-icons-png.flaticon.com/512/3069/3069172.png",
+      "feliz": "https://cdn-icons-png.flaticon.com/512/1326/1326377.png",
+      "triste": "https://cdn-icons-png.flaticon.com/512/1326/1326397.png",
+      "surpreso": "https://cdn-icons-png.flaticon.com/512/1326/1326400.png",
+      "comemorando": "https://cdn-icons-png.flaticon.com/512/1326/1326398.png"
+    },
+    "frases": {
+      "boas_vindas": ["Olá! Vamos aprender matemática juntos! 🌼", "Oi, sou o Pandi! Pronto para o desafio? 🎮", "Vamos resolver alguns problemas de matemática? 🧠"],
+      "acerto": ["Uau! Você acertou! 🎉", "Incrível! Continue assim! 🌟", "Você é muito inteligente! 🧠"],
+      "erro": ["Não desista, você consegue! 💪", "Errar faz parte do aprendizado! 📚", "Vamos tentar de novo? 🤗"],
+      "nivel_up": ["Você subiu de nível! Que orgulho! 🏆", "Novo nível desbloqueado! Você é demais! 🚀", "Olha só quem está evoluindo! 🌈"],
+      "medalha": ["Você ganhou uma medalha! Parabéns! 🏅️", "Nova conquista desbloqueada! 🏅", "Mais uma medalha para sua coleção! ✨"],
+      "bloqueio": ["Oh não! Você errou 4 vezes... Sem celular hoje! 📵", "Parece que você precisa estudar mais... Sem celular por hoje! 😢", "Regras são regras: 4 erros = sem celular! 📱✖"],
+      "punicao": ["Hoje você tem um desafio especial! Mais perguntas para responder! 😬", "Uau, parece que alguém precisa mostrar que realmente sabe! 💪", "Dia de desafio extra! Vamos ver se você consegue! 😏"],
+      "materias_mistas": ["Hoje vamos misturar todas as matérias! Prepare-se! 📖", "Matemática, Português, Ciências... Vamos testar tudo! 🧠", "Desafio de conhecimentos gerais ativado! 🌟"],
+      "desafio_supremo": ["DESAFIO SUPREMO ATIVADO! Prepare-se para o máximo desafio! 👑", "Você está pronto para o nível supremo? Vamos testar seus limites! 💥", "O Desafio Supremo começou! Mostre todo o seu conhecimento! 🌟"]
+    }
+  },
+  "robo": {
+    "nome": "Matix",
+    "imagens": {
+      "normal": "https://cdn-icons-png.flaticon.com/512/2995/2995620.png",
+      "feliz": "https://cdn-icons-png.flaticon.com/512/3069/3069186.png",
+      "triste": "https://cdn-icons-png.flaticon.com/512/3069/3069210.png",
+      "surpreso": "https://cdn-icons-png.flaticon.com/512/3069/3069185.png",
+      "comemorando": "https://cdn-icons-png.flaticon.com/512/3069/3069187.png"
+    },
+    "frases": {
+      "boas_vindas": ["Iniciando sistema de aprendizado! Pronto? 🤖", "Olá humano! Vamos calcular juntos? 📊", "Meus circuitos estão prontos para ajudar você! 💻"],
+      "acerto": ["Processamento correto! Excelente! ✅", "Meus sensores detectam inteligência! 🧠", "Cálculo perfeito, humano! 🚀"],
+      "erro": ["Erro detectado, mas podemos corrigir! 🔧", "Meus algoritmos indicam que devemos tentar novamente! 🔄", "Falha temporária. Recalculando... 💭"],
+      "nivel_up": ["Upgrade de nível concluído! 📈", "Você evoluiu para uma versão melhor! 2.0! 🆙", "Sistema atualizado com sucesso! Novo nível! 🎛️"],
+      "medalha": ["Nova medalha adicionada ao seu banco de dados! 💾", "Conquista desbloqueada! Armazenando... 🏅", "Medalha registrada com sucesso! 🏅️"],
+      "bloqueio": ["Alerta! Alerta! 4 erros detectados = Protocolo 'Sem Celular' ativado! 📵", "Sistema de celular temporariamente desativado após 4 erros! 📱✖", "Falha crítica: 4 erros. Consequência: sem acesso ao celular! 🔒"],
+      "punicao": ["Modo punição ativado! Dificuldade aumentada em 200%! ⚠️", "Protocolo disciplinar iniciado: aumento no número de perguntas detectado! 📊", "Atenção humano: hoje você enfrentará um desafio maior! 🔥"],
+      "materias_mistas": ["Ativando banco de dados de conhecimentos diversos! 📚", "Misturando matérias para teste de conhecimento abrangente! 🧠", "Meus circuitos estão programados para testar todas as disciplinas hoje! 💻"],
+      "desafio_supremo": ["ALERTA VERMELHO! DESAFIO SUPREMO ATIVADO! DIFICULDADE MÁXIMA! 🔴", "Iniciando modo Desafio Supremo! Todos os sistemas em nível crítico! 💥", "Protocolo Desafio Supremo em execução! Prepare seus conhecimentos! 👑"]
+    }
+  },
+  "gato": {
+    "nome": "Miau Math",
+    "imagens": {
+      "normal": "https://cdn-icons-png.flaticon.com/512/1326/1326431.png",
+      "feliz": "https://cdn-icons-png.flaticon.com/512/1326/1326377.png",
+      "triste": "https://cdn-icons-png.flaticon.com/512/1326/1326397.png",
+      "surpreso": "https://cdn-icons-png.flaticon.com/512/1326/1326400.png",
+      "comemorando": "https://cdn-icons-png.flaticon.com/512/1326/1326398.png"
+    },
+    "frases": {
+      "boas_vindas": ["Miau! Vamos brincar com números? 🐱", "Ronron... Pronto para resolver alguns problemas? 🧶", "Miau Math está aqui para ajudar! 🐾"],
+      "acerto": ["Purrfeito! Você acertou! 🎀", "Miau! Que resposta incrível! 🐟", "Ronronando de felicidade com seu acerto! 🧠"],
+      "erro": ["Não se preocupe, gatos também erram às vezes! 🐾", "Miau? Vamos tentar de novo! 🧶", "Um pequeno tropeço, mas você vai conseguir! 🐱"],
+      "nivel_up": ["Novo nível! Isso merece um novelo de lã! 🧶", "Miau! Você subiu de nível como um gato que sobe em árvores! 🌳", "Ronronando de orgulho! Novo nível desbloqueado! 🐱"],
+      "medalha": ["Uma medalha brilhante como olhos de gato! 👁️", "Miau! Mais uma medalha para sua coleção! 🏅", "Essa medalha é quase tão legal quanto uma caixa de papelão! 📦"],
+      "bloqueio": ["Miau? 4 erros? Sem celular hoje, filhote! 📵", "Arranhei o sofá de preocupação! 4 erros = sem celular! 🙀", "Miau triste... 4 erros significa que o celular vai dormir! 😿"],
+      "punicao": ["Miau! Parece que alguém está de castigo hoje! Mais perguntas para você! 😼", "Ronron... Alguém precisa provar que é tão esperto quanto um gato! 🐱", "Meus bigodes sentem que hoje você tem um desafio maior! 🐈"],
+      "materias_mistas": ["Miau! Hoje vamos misturar todas as matérias como um novelo de lã embaralhado! 🧶", "Ronronando de curiosidade! Vamos testar todos os seus conhecimentos! 🐱", "Miau Math quer ver se você sabe de tudo um pouco! 🐾"],
+      "desafio_supremo": ["MIAAAAU! O DESAFIO SUPREMO COMEÇOU! Prepare suas garras! 🐱‍👑", "Ronronando em alerta máximo! Este é o maior desafio de todos! 😼", "Meus bigodes estão arrepiados! O Desafio Supremo vai testar todos os seus limites! 🐈⚡"]
+    }
+  },
+  "coruja": {
+    "nome": "Sábia",
+    "imagens": {
+      "normal": "https://cdn-icons-png.flaticon.com/512/1326/1326441.png",
+      "feliz": "https://cdn-icons-png.flaticon.com/512/1326/1326437.png",
+      "triste": "https://cdn-icons-png.flaticon.com/512/1326/1326444.png",
+      "surpreso": "https://cdn-icons-png.flaticon.com/512/1326/1326442.png",
+      "comemorando": "https://cdn-icons-png.flaticon.com/512/1326/1326439.png"
+    },
+    "frases": {
+      "boas_vindas": ["Olá! A sabedoria matemática te aguarda! 🦉", "Quem? Quem? Quem está pronto para aprender? 📚", "Uma coruja sábia está aqui para te guiar! 🧠"],
+      "acerto": ["Sábia decisão! Resposta correta! 🎓", "Sua sabedoria me impressiona! 🦉", "Correto! Você está ficando tão sábio quanto uma coruja! 📚"],
+      "erro": ["Mesmo os mais sábios erram às vezes! 🦉", "A sabedoria vem de aprender com os erros! 📚", "Não desanime! Cada erro te torna mais sábio! 🧠"],
+      "nivel_up": ["Sua árvore do conhecimento cresceu! Novo nível! 🌳", "Mais sábio a cada nível! Parabéns! 🦉", "Quem? Quem? Quem subiu de nível? Você! 🎓"],
+      "medalha": ["Uma medalha para sua coleção de sabedoria! 🏅", "Sua sabedoria te rendeu uma nova medalha! 🦉", "Brilhante como os olhos de uma coruja à noite! ✨"],
+      "bloqueio": ["Oh! 4 erros significa que a sabedoria recomenda: sem celular! 📵", "Quem? Quem? Quem ficou sem celular após 4 erros? Você! 📱✖", "A sabedoria das regras: 4 erros = sem celular! 🦉"],
+      "punicao": ["A sabedoria antiga diz: quem precisa aprender mais, recebe mais perguntas! 🦉", "Quem? Quem? Quem precisa de um desafio maior hoje? Você! 📚", "Minha sabedoria me diz que você precisa provar seu conhecimento com mais perguntas! 🎓"],
+      "materias_mistas": ["A verdadeira sabedoria vem do conhecimento de todas as áreas! 🦉", "Quem? Quem? Quem vai testar seus conhecimentos em todas as matérias? Eu! 📚", "Uma mente sábia é aquela que domina diversos assuntos! Vamos testar! 🧠"],
+      "desafio_supremo": ["QUEM? QUEM? QUEM OUSOU ATIVAR O DESAFIO SUPREMO? 🦉🔥", "A sabedoria ancestral das corujas será testada ao máximo no Desafio Supremo! 🎓", "Prepare-se para o teste definitivo de conhecimento! A coruja mais sábia está vigilante! 🦉🌟"]
+    }
+  },
+  "cientista": {
+    "nome": "Prof. Einstein",
+    "imagens": {
+      "normal": "https://cdn-icons-png.flaticon.com/512/4825/4825038.png",
+      "feliz": "https://cdn-icons-png.flaticon.com/512/4825/4825112.png",
+      "triste": "https://cdn-icons-png.flaticon.com/512/4825/4825123.png",
+      "surpreso": "https://cdn-icons-png.flaticon.com/512/4825/4825029.png",
+      "comemorando": "https://cdn-icons-png.flaticon.com/512/4825/4825112.png"
+    },
+    "frases": {
+      "boas_vindas": ["A ciência nos espera! Pronto para o experimento? 🧪", "Eureka! Vamos descobrir juntos o mundo do conhecimento! 🔬", "Bem-vindo ao laboratório do saber! 🦿"],
+      "acerto": ["Brilhante! Sua hipótese estava correta! 👨‍🔬", "Fascinante! Você resolveu a equação! 📊", "Excelente resultado experimental! 🧪"],
+      "erro": ["Interessante... Vamos reformular nossa hipótese e tentar novamente! 🦿", "Até Einstein errava! Vamos continuar experimentando! 🔬", "Na ciência, aprendemos tanto com os erros quanto com os acertos! 🧪"],
+      "nivel_up": ["Sua teoria evoluiu para um novo nível! 📊", "Extraordinário! Você acaba de fazer um avanço científico! 👨‍🔬", "E=mc²... E você acaba de subir de nível! 💫"],
+      "medalha": ["Uma medalha digna de um Nobel! 🏅", "Sua contribuição para a ciência merece reconhecimento! 🏆", "Uma descoberta que merece uma medalha! 🧪"],
+      "bloqueio": ["Minha teoria comprova: 4 erros = sem celular! 📵", "A fórmula é simples: 4 erros resultam em perda de privilégios eletrônicos! 📱❌", "Após análise dos dados, concluo que você ficará sem celular até amanhã! 🔬"],
+      "punicao": ["Minha teoria indica que você precisa de mais experimentos hoje! 🧪", "Fascinante! Hoje temos um protocolo experimental especial com mais perguntas! 👨‍🔬", "Segundo meus cálculos, você precisará responder mais questões hoje! 📊"],
+      "materias_mistas": ["A interdisciplinaridade é a base da ciência moderna! Vamos testar todas as áreas! 👨‍🔬", "Minha pesquisa abrange todas as disciplinas! Prepare-se! 🧪", "Um cientista de verdade domina diversos campos do conhecimento! 📚"],
+      "desafio_supremo": ["EUREKA! ATIVAMOS O DESAFIO SUPREMO! Minha maior descoberta científica! 💡💥", "Segundo minhas equações, o Desafio Supremo testará o limite do seu conhecimento! 📊🔥", "ATENÇÃO! Experimento de alto risco iniciado: DESAFIO SUPREMO! 🧪👨‍🔬"]
+    }
+  }
+}

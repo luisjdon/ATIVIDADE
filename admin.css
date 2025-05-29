@@ -1,0 +1,220 @@
+/**
+ * ADMIN.CSS
+ * Estilos para a área administrativa e componentes relacionados
+ */
+
+/* Painel Administrativo */
+.painel-admin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+  z-index: 1000;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+.painel-admin-header {
+  background: linear-gradient(135deg, #4a148c, #7b1fa2);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.painel-admin-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.painel-admin-header h3 i {
+  margin-right: 10px;
+}
+
+.painel-admin-content {
+  padding: 20px;
+}
+
+.btn-fechar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Autenticação Admin */
+.admin-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-auth p {
+  margin: 0 0 5px 0;
+  font-weight: 500;
+}
+
+.admin-auth input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Controles Admin */
+.admin-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.admin-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+.btn-admin {
+  background-color: #7b1fa2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-admin:hover {
+  background-color: #9c27b0;
+}
+
+/* Modal de Regras */
+.regras-content {
+  max-width: 600px;
+}
+
+.regras-header {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.regras-header i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.regras-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.regra-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.regra-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+}
+
+.regra-texto h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+}
+
+.regra-texto p {
+  margin: 0 0 5px 0;
+}
+
+.regra-aviso {
+  color: var(--error-color);
+  font-weight: 500;
+}
+
+.regras-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-entendido {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.btn-entendido:hover {
+  background-color: var(--accent-color);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .painel-admin {
+    width: 95%;
+  }
+  
+  .regra-item {
+    flex-direction: column;
+  }
+  
+  .regra-icon {
+    margin-bottom: 10px;
+  }
+}

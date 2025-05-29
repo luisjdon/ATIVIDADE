@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Supremo</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="skins.css">
+  <link rel="stylesheet" href="desafio_supremo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Controles de áudio -->
+  <div class="audio-controls" id="audioToggle">
+    <i class="fas fa-volume-up" id="audioIcon"></i>
+  </div>
+  
+  <!-- Container de confetes para animações -->
+  <div class="confetti-container" id="confettiContainer"></div>
+  
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-brain"></i> Desafio Supremo</h1>
+      
+      <!-- Avatar do usuário -->
+      <div class="avatar-container">
+        <div class="avatar">
+          <img id="userAvatar" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Avatar">
+          <div class="avatar-level" id="avatarLevel">1</div>
+        </div>
+      </div>
+      
+      <!-- Seletor de tema -->
+      <div class="theme-selector">
+        <div class="theme-option theme-default active" data-theme="default"></div>
+        <div class="theme-option theme-princess" data-theme="princess"></div>
+        <div class="theme-option theme-gamer" data-theme="gamer"></div>
+        <div class="theme-option theme-forest" data-theme="forest"></div>
+      </div>
+      
+      <!-- Container de recompensas -->
+      <div class="rewards-container">
+        <div class="reward-item">
+          <div class="coins">
+            <i class="fas fa-coins"></i> <span id="coinCount">0</span>
+          </div>
+          <div>Moedas</div>
+        </div>
+        <div class="reward-item">
+          <div class="level-badge">
+            <i class="fas fa-star"></i> Nível <span id="userLevel">1</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="status-bar">
+        <div class="status-item">
+          <i class="fas fa-times-circle"></i> Erros: <strong id="erros">0</strong>/4
+        </div>
+        <div class="status-item">
+          <i class="fas fa-question-circle"></i> Perguntas: <strong id="perguntasCount">0</strong>/<span id="totalPerguntas">10</span>
+        </div>
+        <div class="status-item">
+          <i class="fas fa-trophy"></i> Pontuação: <strong id="pontuacao">0</strong>/10
+        </div>
+        <div class="status-item">
+          <i class="fas fa-award"></i> Medalhas: <strong id="medalCount">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Barra de progresso -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+      </div>
+      
+      <div id="perguntas" class="perguntas-container"></div>
+      
+      <div class="actions">
+        <button id="btnRegras" class="rules-btn">
+          <i class="fas fa-scroll"></i> Regras
+        </button>
+        <button id="btnLoja" class="store-btn">
+          <i class="fas fa-store"></i> Loja de Avatares
+        </button>
+        <button id="desafioDiario" class="daily-challenge-btn">
+          <i class="fas fa-star"></i> Desafio do Dia
+        </button>
+        <button id="btnLogica" class="game-btn" onclick="window.location.href='logica.php'">
+          <i class="fas fa-brain"></i> Desafio de Lógica
+        </button>
+        <button id="btnXadrez" class="game-btn" onclick="window.location.href='xadrez.php'">
+          <i class="fas fa-chess"></i> Aprenda Xadrez
+        </button>
+        <!-- Botão de gerar novas perguntas removido conforme solicitado -->
+      </div>
+      
+      <!-- Botão para acessar área administrativa -->
+      <div class="admin-access">
+        <button id="btnAdminAccess" class="admin-btn" onclick="abrirAreaAdmin()">
+          <i class="fas fa-cog"></i> Área Administrativa
+        </button>
+      </div>
+      
+      <!-- Medalhas e insígnias -->
+      <div class="badges-container" id="badgesContainer">
+        <div class="badge" id="badge-algebra">
+          <div class="badge-icon"><i class="fas fa-square-root-alt"></i></div>
+          <div class="badge-name">Mestre da Álgebra</div>
+        </div>
+        <div class="badge" id="badge-geometry">
+          <div class="badge-icon"><i class="fas fa-shapes"></i></div>
+          <div class="badge-name">Gênio da Geometria</div>
+        </div>
+        <div class="badge" id="badge-fractions">
+          <div class="badge-icon"><i class="fas fa-divide"></i></div>
+          <div class="badge-name">Fera das Frações</div>
+        </div>
+        <div class="badge" id="badge-speed">
+          <div class="badge-icon"><i class="fas fa-bolt"></i></div>
+          <div class="badge-name">Velocista</div>
+        </div>
+      </div>
+    </main>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Explicação</h2>
+        <div id="explicacao-conteudo"></div>
+      </div>
+    </div>
+    
+    <!-- Modal de nível -->
+    <div id="levelModal" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="levelModal">&times;</span>
+        <h2><i class="fas fa-level-up-alt"></i> Novo Nível!</h2>
+        <div id="level-up-content" class="level-up-animation">
+          <div class="big-level">Nível <span id="newLevel">2</span></div>
+          <p>Parabéns! Você subiu de nível!</p>
+          <div class="level-rewards">
+            <p><i class="fas fa-gift"></i> Recompensas:</p>
+            <ul>
+              <li>+50 moedas</li>
+              <li>Nova medalha desbloqueada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal de seleção de avatar -->
+    <div id="avatarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="avatarModal">&times;</span>
+        <h2><i class="fas fa-user-circle"></i> Escolha seu Avatar</h2>
+        <div class="avatar-selection">
+          <div class="avatar-option" data-avatar="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Avatar 1">
+          </div>
+          <div class="avatar-option" data-avatar="https://cdn-icons-png.flaticon.com/512/3135/3135823.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="Avatar 2">
+          </div>
+          <div class="avatar-option" data-avatar="https://cdn-icons-png.flaticon.com/512/3940/3940403.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/3940/3940403.png" alt="Avatar 3">
+          </div>
+          <div class="avatar-option" data-avatar="https://cdn-icons-png.flaticon.com/512/3940/3940405.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/3940/3940405.png" alt="Avatar 4">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Atividades de Matemática &copy; 2025</p>
+    </footer>
+  </div>
+  
+  <!-- Mascote interativo -->
+  <div class="mascot-container" id="mascotContainer">
+    <div class="mascot" id="mascot"></div>
+    <div class="mascot-bubble" id="mascotBubble">
+      <div class="bubble-content">Olá! Vamos aprender matemática?</div>
+      <div class="mascot-chat">
+        <input type="text" id="mascotInput" placeholder="Converse comigo..." />
+        <button id="mascotSend"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de seleção de mascote -->
+  <div id="mascotSelectionModal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="mascotSelectionModal">&times;</span>
+      <h2><i class="fas fa-paw"></i> Escolha seu Mascote</h2>
+      <div class="mascot-selection">
+        <div class="mascot-option" data-mascot="panda">
+          <img src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png" alt="Panda">
+          <div class="mascot-name">Pandi</div>
+        </div>
+        <div class="mascot-option" data-mascot="robo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2995/2995620.png" alt="Robô">
+          <div class="mascot-name">Matix</div>
+        </div>
+        <div class="mascot-option" data-mascot="gato">
+          <img src="https://cdn-icons-png.flaticon.com/512/1326/1326431.png" alt="Gato">
+          <div class="mascot-name">Miau Math</div>
+        </div>
+        <div class="mascot-option" data-mascot="coruja">
+          <img src="https://cdn-icons-png.flaticon.com/512/1326/1326441.png" alt="Coruja">
+          <div class="mascot-name">Sábia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de bloqueio -->
+  <div id="bloqueioModal" class="modal">
+    <div class="modal-content bloqueio-content">
+      <h2><i class="fas fa-ban"></i> Celular Bloqueado!</h2>
+      <div class="bloqueio-info">
+        <img src="https://cdn-icons-png.flaticon.com/512/65/65168.png" alt="Celular bloqueado" class="celular-bloqueado-img">
+        <div class="bloqueio-texto">
+          <p>Você errou 4 questões hoje!</p>
+          <p>Seu celular está bloqueado até amanhã.</p>
+          <p class="bloqueio-data" id="bloqueioData">Bloqueado em: 17/05/2025</p>
+          <div class="countdown" id="bloqueioCountdown">Tempo restante: 23:59:59</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal da Área Administrativa -->
+  <div id="adminModal" class="modal">
+    <div class="modal-content admin-content">
+      <span class="close" data-modal="adminModal">&times;</span>
+      <h2><i class="fas fa-cog"></i> Área Administrativa</h2>
+      
+      <div id="adminLogin" class="admin-login">
+        <p>Digite a senha para acessar a área administrativa:</p>
+        <input type="password" id="adminPassword" placeholder="Senha">
+        <button id="btnAdminLogin" onclick="verificarSenhaAdmin()">Entrar</button>
+        <p id="adminLoginError" class="error-message"></p>
+      </div>
+      
+      <div id="adminControls" class="admin-controls" style="display: none;">
+        <!-- Controles do Desafio Supremo -->
+        <div class="desafio-supremo-controls">
+          <h3><i class="fas fa-crown"></i> Desafio Supremo</h3>
+          <div class="desafio-buttons">
+            <button id="btnDesafioSupremo" class="btn-desafio-supremo">
+              <i class="fas fa-crown"></i> Ativar Desafio Supremo
+            </button>
+            <button id="btnModoPunicao" class="btn-modo-punicao">
+              <i class="fas fa-exclamation-triangle"></i> Ativar Modo Punição
+            </button>
+            <button id="btnMateriasMistas" class="btn-materias-mistas">
+              <i class="fas fa-random"></i> Ativar Matérias Mistas
+            </button>
+          </div>
+          <p class="desafio-info">O Desafio Supremo combina matérias mistas com maior dificuldade para testar conhecimentos!</p>
+        </div>
+        
+        <!-- Configurações adicionais -->
+        <div class="admin-settings">
+          <h3><i class="fas fa-sliders-h"></i> Configurações</h3>
+          <div class="settings-group">
+            <label for="questoesLimite">Número de questões por dia:</label>
+            <input type="number" id="questoesLimite" min="5" max="30" value="10">
+            <button id="btnSalvarQuestoes" onclick="salvarLimiteQuestoes()">Salvar</button>
+          </div>
+          <div class="settings-group">
+            <label for="errosLimite">Limite de erros para bloqueio:</label>
+            <input type="number" id="errosLimite" min="1" max="10" value="4">
+            <button id="btnSalvarErros" onclick="salvarLimiteErros()">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arquivos de áudio -->
+  <audio id="correctSound" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2005/2005-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="wrongSound" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2008/2008-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="coinSound" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/888/888-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="levelUpSound" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/1993/1993-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="clickSound" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/1115/1115-preview.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts do sistema -->
+  <script src="script.js"></script>
+  <script src="controle.js"></script>
+  <script src="regras.js"></script>
+  <script src="skins.js"></script>
+  <script src="materias.js"></script>
+  <script src="mascote.js"></script>
+  <script src="desafio_supremo.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

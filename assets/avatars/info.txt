@@ -1,0 +1,16 @@
+Avatares para o sistema de skins do Desafio Supremo
+
+Avatares disponíveis:
+1. padrao.png - Avatar padrão do sistema
+2. princesa.png - Avatar com tema de princesa
+3. gamer.png - Avatar com tema gamer
+4. robo.png - Avatar com tema de robô
+5. astronauta.png - Avatar com tema de astronauta
+
+Todos os avatares são obtidos de sites de ícones gratuitos como Flaticon.
+URLs das imagens são definidas no arquivo skins.js.
+
+Para adicionar novos avatares:
+1. Adicione a imagem na pasta assets/avatars/
+2. Atualize o catálogo no arquivo skins.js
+3. Defina o preço e descrição do novo avatar

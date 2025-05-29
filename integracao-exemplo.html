@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Matemática</title>
+    
+    <!-- Estilos existentes -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Novo estilo para impedir seleção de texto -->
+    <link rel="stylesheet" href="assets/css/no-select.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Desafio de Matemática</h1>
+            <div class="user-info">
+                <span class="moedas">Moedas: <span id="moedas-valor">100</span></span>
+                <span class="nivel">Nível: <span id="nivel-valor">1</span></span>
+            </div>
+        </header>
+        
+        <main>
+            <!-- Exemplo de questão com os novos atributos data-questao-id e data-resposta-correta -->
+            <div class="questao-container" data-questao-id="1" data-resposta-correta="2">
+                <h3 class="pergunta-texto">Questão 1</h3>
+                <p class="pergunta-texto">Matemática - Álgebra</p>
+                <div class="enunciado">
+                    <p class="pergunta-texto">Qual é o valor de x na equação 3x - 4 = 2?</p>
+                </div>
+                <div class="resposta-container">
+                    <input type="text" class="resposta-input" placeholder="Digite sua resposta">
+                    <button class="btn-verificar">Verificar</button>
+                </div>
+                <!-- A resposta correta será inserida aqui pelo JavaScript quando necessário -->
+            </div>
+            
+            <!-- Exemplo de outra questão -->
+            <div class="questao-container" data-questao-id="2" data-resposta-correta="Júpiter">
+                <h3 class="pergunta-texto">Questão 2</h3>
+                <p class="pergunta-texto">Ciências - Sistema Solar</p>
+                <div class="enunciado">
+                    <p class="pergunta-texto">Qual é o maior planeta do Sistema Solar?</p>
+                </div>
+                <div class="resposta-container">
+                    <input type="text" class="resposta-input" placeholder="Digite sua resposta">
+                    <button class="btn-verificar">Verificar</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Desafio de Matemática - Aplicativo Educativo</p>
+        </footer>
+    </div>
+
+    <!-- Scripts existentes -->
+    <script src="script.js"></script>
+    
+    <!-- Novo script para monitoramento de visibilidade -->
+    <script src="visibility-handler.js"></script>
+    
+    <!-- Novo script para manipulação de respostas -->
+    <script src="assets/js/resposta-handler.js"></script>
+    
+    <!-- Inicialização do monitoramento de visibilidade -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar o manipulador de visibilidade
+            const visibilityHandler = new VisibilityHandler({
+                resetOnHidden: true,
+                showWarning: true,
+                warningMessage: "Atenção! Você saiu da janela durante o desafio. Isso não é permitido.",
+                allowedSwitchCount: 0
+            });
+            
+            // Iniciar o monitoramento quando o jogo começar
+            visibilityHandler.start();
+        });
+    </script>
+</body>
+</html>

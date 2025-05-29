@@ -1,0 +1,220 @@
+/**
+ * SKINS.CSS
+ * Estilos para a loja de skins/avatares e componentes relacionados
+ */
+
+/* Modal da Loja */
+.loja-content {
+  max-width: 800px;
+  width: 90%;
+}
+
+.loja-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.loja-header h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loja-header i {
+  color: var(--reward-color);
+}
+
+.moedas-display {
+  background-color: var(--reward-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loja-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Cards de Skin */
+.skin-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.skin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skin-card.possui {
+  border: 2px solid var(--success-color);
+}
+
+.skin-card.ativa {
+  border: 2px solid var(--reward-color);
+}
+
+.skin-image {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.skin-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.skin-badge-ativa,
+.skin-badge-possui {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: white;
+}
+
+.skin-badge-ativa {
+  background-color: var(--reward-color);
+}
+
+.skin-badge-possui {
+  background-color: var(--success-color);
+}
+
+.skin-info {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.skin-info h4 {
+  margin: 0 0 10px 0;
+  color: var(--text-color);
+}
+
+.skin-info p {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.skin-efeito {
+  font-style: italic;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+}
+
+.skin-preco {
+  font-weight: bold;
+  color: var(--reward-color);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.skin-actions {
+  padding: 0 15px 15px 15px;
+}
+
+.btn-comprar,
+.btn-equipar,
+.btn-equipada {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-comprar {
+  background-color: var(--reward-color);
+  color: white;
+}
+
+.btn-comprar:hover {
+  background-color: #e6a800;
+}
+
+.btn-equipar {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-equipar:hover {
+  background-color: var(--accent-color);
+}
+
+.btn-equipada {
+  background-color: #e0e0e0;
+  color: #666;
+  cursor: default;
+}
+
+/* Animações para compra de skin */
+@keyframes skinPurchased {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.skin-purchased {
+  animation: skinPurchased 0.5s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .loja-body {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .loja-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .loja-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .moedas-display {
+    align-self: flex-end;
+  }
+}
