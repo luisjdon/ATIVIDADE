@@ -7,7 +7,7 @@ header('Cache-Control: no-cache, no-store, must-revalidate');
 
 // Obter a chave da API do arquivo de configurau00e7u00e3o ou definir diretamente
 // Substitua pela sua chave da API Gemini
-$api_key = "AIzaSyDJP5RbFxXDiLkQFxvvJGhOmHHrZ_X900o";
+$api_key = "API";
 
 // Obter dados da requisiu00e7u00e3o
 $input = json_decode(file_get_contents("php://input"), true);
